@@ -14,7 +14,8 @@
                     navigator.geolocation.watchPosition(position => {
                         console.log(position.coords.latitude);
                         console.log(position.coords.longitude);
-                    })
+                        document.getElementById("map").innerHTML = `<p>Latitude: ${latitude.toFixed(8)}</p><p>Longitude: ${longitude.toFixed(8)}</p>`;
+                    });
                 }
                 else{
                     console.log("Location Not Available");
